@@ -1,10 +1,8 @@
 package com.hoangtien2k3.blogapi.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.util.Set;
 
@@ -12,6 +10,10 @@ import java.util.Set;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
+@Builder
+@With
+@Accessors(fluent = true)
 @Entity
 @Table(name = "users")
 public class User {

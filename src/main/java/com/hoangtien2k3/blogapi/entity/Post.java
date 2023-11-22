@@ -3,6 +3,8 @@ package com.hoangtien2k3.blogapi.entity;
 import lombok.*;
 
 import jakarta.persistence.*;
+import lombok.experimental.Accessors;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,7 +12,10 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Data
+@Builder
+@With
+@Accessors(fluent = true)
 @Entity
 @Table(
         name = "posts", uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})}

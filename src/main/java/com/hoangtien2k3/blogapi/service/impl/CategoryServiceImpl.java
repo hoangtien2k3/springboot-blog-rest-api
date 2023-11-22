@@ -14,8 +14,8 @@ import java.util.stream.Collectors;
 @Service
 public class CategoryServiceImpl implements CategoryService {
 
-    private CategoryRepository categoryRepository;
-    private ModelMapper modelMapper;
+    private final CategoryRepository categoryRepository;
+    private final ModelMapper modelMapper;
 
     public CategoryServiceImpl(CategoryRepository categoryRepository, ModelMapper modelMapper) {
         this.categoryRepository = categoryRepository;
@@ -53,9 +53,9 @@ public class CategoryServiceImpl implements CategoryService {
         Category category = categoryRepository.findById(categoryId)
                 .orElseThrow(() -> new ResourceNotFoundException("Category", "id", categoryId));
 
-        category.setName(categoryDto.getName());
-        category.setDescription(categoryDto.getDescription());
-        category.setId(categoryId);
+        category.name(categoryDto.getName());
+        category.description(categoryDto.getDescription());
+        category.id(categoryId);
 
         Category updatedCategory = categoryRepository.save(category);
 

@@ -23,12 +23,11 @@ import java.util.Set;
 @Service
 public class AuthServiceImpl implements AuthService {
 
-    private AuthenticationManager authenticationManager;
-    private UserRepository userRepository;
-    private RoleRepository roleRepository;
-    private PasswordEncoder passwordEncoder;
-    private JwtTokenProvider jwtTokenProvider;
-
+    private final AuthenticationManager authenticationManager;
+    private final UserRepository userRepository;
+    private final RoleRepository roleRepository;
+    private final PasswordEncoder passwordEncoder;
+    private final JwtTokenProvider jwtTokenProvider;
 
     public AuthServiceImpl(AuthenticationManager authenticationManager,
                            UserRepository userRepository,
@@ -69,15 +68,15 @@ public class AuthServiceImpl implements AuthService {
         }
 
         User user = new User();
-        user.setName(registerDto.getName());
-        user.setUsername(registerDto.getUsername());
-        user.setEmail(registerDto.getEmail());
-        user.setPassword(passwordEncoder.encode(registerDto.getPassword()));
+        user.name(registerDto.getName());
+        user.username(registerDto.getUsername());
+        user.email(registerDto.getEmail());
+        user.password(passwordEncoder.encode(registerDto.getPassword()));
 
         Set<Role> roles = new HashSet<>();
         Role userRole = roleRepository.findByName("ROLE_USER").get();
         roles.add(userRole);
-        user.setRoles(roles);
+        user.roles(roles);
 
         userRepository.save(user);
 
