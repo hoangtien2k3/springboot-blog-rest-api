@@ -10,7 +10,7 @@ import jakarta.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/comments")
 public class CommentController {
 
     private final CommentService commentService;
@@ -51,4 +51,5 @@ public class CommentController {
         commentService.deleteComment(postId, commentId);
         return new ResponseEntity<>("Comment deleted successfully", HttpStatus.OK);
     }
+
 }
