@@ -4,7 +4,7 @@
 ## Tools and Technologies Used
 - [Java]()
 - [Spring Boot]()
-- [JDK - 1.8 or later]()
+- [JDK - 17 or later]()
 - [Spring MVC]()
 - [Hibernate]()
 - [Spring Security]()
