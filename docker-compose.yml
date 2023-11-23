@@ -8,6 +8,8 @@ services:
       MYSQL_DATABASE: myblog
       MYSQL_USER: admin
       MYSQL_PASSWORD: 12042003
+    ports:
+      - "3306:3306"
 
   springboot-app:
     image: springboot-blog-rest-api:latest

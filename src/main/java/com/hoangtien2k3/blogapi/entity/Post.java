@@ -17,11 +17,8 @@ import java.util.Set;
 @With
 @Accessors(fluent = true)
 @Entity
-@Table(
-        name = "posts", uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})}
-)
+@Table(name = "posts", uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})})
 public class Post {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
