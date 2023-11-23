@@ -25,6 +25,12 @@
 ## Config Dockerfile:
 <img width="1440" alt="image" src="https://github.com/hoangtien2k3qx1/springboot-blog-rest-api/assets/122768076/86b1c463-4424-4f8c-afc3-a3fec423fcd3">
 
+## Run docker-compose:
+<img width="1440" alt="image" src="https://github.com/hoangtien2k3qx1/springboot-blog-rest-api/assets/122768076/4fe9b1f2-237c-421a-b134-2b97c51604cb">
+
+## Run in Terminal docker-compose:
+<img width="1440" alt="image" src="https://github.com/hoangtien2k3qx1/springboot-blog-rest-api/assets/122768076/2532490f-284b-4230-985b-d6d091598694">
+
 ## What in this course ?
 - Build great REST API’s for Blog App using Spring Boot, Spring Security, JWT, Spring Data JPA (Hibernate), MySQL database
 - REST basics - Resource, Sub-resource, URI, HTTP methods, HTTP status codes
